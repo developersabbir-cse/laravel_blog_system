@@ -27,7 +27,7 @@
                                        <div class="form-group">
                                            <label class="col-form-label col-md-3">Email Address</label>
                                            <div class="col-md-9">
-                                               <input type="email" onkeyup="emailCheck(this.value)" name="email_address" class="form-control">
+                                               <input type="email" onblur="emailCheck(this.value)" name="email_address" class="form-control">
                                                <span id="res"></span>
                                            </div>
                                        </div>
@@ -118,7 +118,7 @@
         function emailCheck(email) {
 
             var xmlHttp = new XMLHttpRequest();
-            var serverPage = 'http://localhost/laravel_res/public/email-check/'+email;
+            var serverPage = 'http://localhost/laravel_blog_system/public/email-check/'+email;
 
             xmlHttp.onreadystatechange = function () {
                if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
